@@ -2,7 +2,7 @@
 /**
  * Plugin Name: JGPlanetary
  * Description: Helps astrophotographers determine optimal planetary viewing times
- * Version: .65
+ * Version: .7
  * Author: jaglab
  */
 
@@ -15,7 +15,7 @@ if (!defined('ABSPATH')) {
 class PlanetaryAltitude {
     private $plugin_path;
     private $plugin_url;
-    private $version = '.65'; // Add version variable here
+    private $version = '.7'; // Add version variable here
 
     public function __construct() {
         $this->plugin_path = plugin_dir_path(__FILE__);

@@ -144,7 +144,14 @@ class SolarSystemVisualizer {
     handleResize() {
         // Get parent container width
         const parentWidth = this.canvas.parentElement.clientWidth;
-        const parentHeight = Math.min(parentWidth * 0.6, 600); // 60% of width, max 600px
+        
+        // Make it more square on mobile screens
+        let parentHeight;
+        if (parentWidth < 768) { // mobile breakpoint
+            parentHeight = Math.min(parentWidth * 0.9, 600); // 90% of width on mobile
+        } else {
+            parentHeight = Math.min(parentWidth * 0.6, 600); // 60% of width on desktop
+        }
         
         // Update canvas dimensions
         this.canvas.width = parentWidth;
