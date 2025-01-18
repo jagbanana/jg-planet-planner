@@ -1,6 +1,6 @@
 # JG Planetary Planner: Altitude and Position Visual Calculator for Astronomers
 
-JGPlanetary is a WordPress plugin that helps astrophotographers and astronomers determine optimal planetary viewing times. It provides interactive visualizations of planetary altitudes and solar system positions throughout the year.
+JG Planet Planner is a WordPress plugin that helps astrophotographers and astronomers determine optimal planetary viewing times. It provides interactive visualizations of planetary altitudes and solar system positions throughout the year.
 
 ## Screenshot
 
@@ -27,14 +27,14 @@ JGPlanetary is a WordPress plugin that helps astrophotographers and astronomers 
 
 ## Installation
 
-1. Download the latest release from the GitHub repository
-2. Upload the plugin files to the `/wp-content/plugins/jgplanetary` directory
+1. Download the latest release (ZIP file) from the GitHub repository
+2. Go to WordPress Admin > Plugins > Add New Plugin > Upload and select the ZIP file
 3. Activate the plugin through the 'Plugins' screen in WordPress
-4. Use the shortcode `[planetary_altitude]` to display the calculator on any page or post
+4. Use the shortcode `[jg_planet_planner]` to display the calculator on any page or post
 
 ## Usage
 
-1. Place the shortcode `[planetary_altitude]` on any WordPress page or post
+1. Place the shortcode `[jg_planet_planner]` on any WordPress page or post
 2. Set your location using either:
    - The "Detect My Location" button
    - Manual location search

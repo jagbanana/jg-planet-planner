@@ -1,8 +1,8 @@
 <?php
 /**
- * Plugin Name: JGPlanetary
- * Description: Helps astrophotographers determine optimal planetary viewing times
- * Version: .7
+ * Plugin Name: JG Planet Planner
+ * Description: Helps astronomers determine optimal planetary viewing times
+ * Version: 1
  * Author: jaglab
  */
 
@@ -23,7 +23,7 @@ class PlanetaryAltitude {
         
         // Initialize hooks
         add_action('wp_enqueue_scripts', array($this, 'enqueue_scripts'));
-        add_shortcode('planetary_altitude', array($this, 'render_calculator'));
+        add_shortcode('jg_planet_planner', array($this, 'render_calculator'));
     }
 
     public function enqueue_scripts() {
