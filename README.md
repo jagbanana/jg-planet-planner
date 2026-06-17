@@ -1,59 +1,41 @@
-# JG Planetary Planner: Altitude and Position Visual Calculator for Astronomers
+# JG Planet Planner
 
-JG Planet Planner is a WordPress plugin that helps astrophotographers and astronomers determine optimal planetary viewing times. It provides interactive visualizations of planetary altitudes and solar system positions throughout the year.
+A standalone React planner for finding useful planetary observing windows by location, year, time, and month.
 
-## Screenshot
-
-### Main Dashboard
-![The main dashboard showing altitudes and positions](screenshots/dashboard.png)
-*The dashboard shows planetary altitudes and position, letting you find the optimal day and time to view and photograph planets.*
+Live version: <https://jaglab.org/planet-planner>
 
 ## Features
 
-- Real-time planetary altitude calculations based on user location
-- Interactive altitude graphs for Mercury, Venus, Mars, Jupiter, and Saturn
-- Solar system visualization with accurate planetary positions
-- Location detection or manual entry
-- Customizable year and time selection
-- Responsive design using Bootstrap
+- Search by city, address, landmark, or dark-sky site
+- Optional browser geolocation
+- Altitude curves for Mercury, Venus, Mars, Jupiter, and Saturn
+- Month-focused cards showing selected-month best, annual best, and usable nights above 20°
+- Solar-system position visualization
 - Mars-Earth distance indicator
+- Responsive two-column planning layout
 
-## Requirements
+## How it works
 
-- WordPress 5.0 or higher
-- PHP 7.4 or higher
-- Modern web browser with JavaScript enabled
-- Bootstrap 5.2.3 (included)
+This app runs entirely in the browser:
 
-## Installation
+- Planetary calculations: [Astronomy Engine](https://github.com/cosinekitty/astronomy)
+- Geocoding: [OpenStreetMap Nominatim](https://nominatim.openstreetmap.org/)
+- UI: React + Vite
 
-1. Download the latest release (ZIP file) from the GitHub repository
-2. Go to WordPress Admin > Plugins > Add New Plugin > Upload and select the ZIP file
-3. Activate the plugin through the 'Plugins' screen in WordPress
-4. Use the shortcode `[jg_planet_planner]` to display the calculator on any page or post
+Altitude calculations are based on the selected observer latitude/longitude, year, and hour. The month control focuses the dashboard on a specific month while preserving the annual altitude context.
 
-## Usage
+## Local development
 
-1. Place the shortcode `[jg_planet_planner]` on any WordPress page or post
-2. Set your location using either:
-   - The "Detect My Location" button
-   - Manual location search
-3. Use the year selector and time slider to choose when you want to observe
-4. View the altitude graphs for each planet
-5. Explore the solar system visualization with the month slider
-
-## Dependencies
-
-- [Astronomy Engine](https://github.com/cosinekitty/astronomy) v2.1.17
-- [Chart.js](https://www.chartjs.org/) v3.7.0
-- [Bootstrap](https://getbootstrap.com/) v5.2.3
-- jQuery (WordPress core)
-
-## Development
-
-### Building from Source
-
-1. Clone the repository
-2. Install dependencies (if using npm for development)
 ```bash
 npm install
+npm run dev
+```
+
+## Production build
+
+```bash
+npm run build
+npm run preview
+```
+
+The production build outputs static files to `dist/` and can be hosted on Cloudflare Pages, Netlify, GitHub Pages, or any static host.
