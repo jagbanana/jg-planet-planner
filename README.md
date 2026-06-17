@@ -4,6 +4,12 @@ A standalone React planner for finding useful planetary observing windows by loc
 
 Live version: <https://jaglab.org/planet-planner>
 
+## Screenshots
+
+![JG Planet Planner dashboard](images/planet-planner.png)
+
+![JG Planet Planner solar system and altitude views](images/planet-planner2.png)
+
 ## Features
 
 - Search by city, address, landmark, or dark-sky site
